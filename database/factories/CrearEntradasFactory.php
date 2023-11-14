@@ -17,7 +17,10 @@ class CrearEntradasFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'titulo'=> $this->faker->sentence(),
+            'autor'=> $this->faker->name(),
+            'fecha_publicacion'=> $this->faker->date(),
+            'contenido'=> $this->faker->realText()
         ];
     }
 }
