@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +16,8 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 }); */
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/ver-entradas', [App\Http\Controllers\VerEntradaController::class, 'index']);
+Route::get('/crear-entradas', [App\Http\Controllers\AltaEntradaController::class, 'index']);
