@@ -19,5 +19,5 @@ use Illuminate\Support\Facades\Route;
 //Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/ver-entradas', [App\Http\Controllers\VerEntradaController::class, 'index']);
+Route::get('/ver-entradas', [App\Http\Controllers\ListaEntradasController::class, 'index']);
 Route::get('/crear-entradas', [App\Http\Controllers\AltaEntradaController::class, 'index']);
