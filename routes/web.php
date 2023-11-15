@@ -24,5 +24,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/ver-entradas', [ListaEntradasController::class, 'index']);
 Route::post('/buscar', [ListaEntradasController::class, 'buscar']);
+Route::get('/entrada/{id}', [ListaEntradasController::class, 'buscarEntrada']);
 Route::get('/crear-entradas', [AltaEntradaController::class, 'index']);
 Route::post('/guarda-entrada', [AltaEntradaController::class, 'guardar']);
