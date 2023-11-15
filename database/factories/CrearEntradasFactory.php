@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\CreaEntradas;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,6 +15,8 @@ class CrearEntradasFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    protected $model = CreaEntradas::class;
     public function definition()
     {
         return [
