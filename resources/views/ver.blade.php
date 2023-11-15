@@ -26,7 +26,7 @@
             <h4 class="card-title">{{$entrada->titulo}}</h4>
             <h6 class="card-subtitle text-muted">{{$entrada->autor}}</h6>
             <p class="card-text">{{$entrada->contenido}}</p>
-            <a href="#" class="btn btn-primary">Ver mas...</a>
+            <a href="{{url('entrada/'.$entrada->id.'')}}" class="btn btn-primary">Ver mas...</a>
         </div>
         <div class="card-footer">
             <small class="text-muted">Fecha de Publicación: {{$entrada->fecha_publicacion}}</small>
