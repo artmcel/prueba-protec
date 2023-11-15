@@ -16,4 +16,22 @@ class ListaEntradasController extends Controller
 
     }
 
+    public function buscar( Request $request ){
+
+        $buscar = DB::table('entradas')
+                -> where('titulo' ,'like','%'.$request->input('buscar').'%', 'OR', 
+                'autor' ,'like','%'.$request->input('buscar').'%', 'OR',
+                'contenido' ,'like','%'.$request->input('buscar').'%')
+                ->get();
+
+        if($buscar->isEmpty()){
+            //print_r('vacio');
+            return redirect('ver-entradas')->with('resultado', 'vacio');
+
+        }
+        return view('ver', ['entradas' => $buscar]);
+
+
+    }
+
 }
