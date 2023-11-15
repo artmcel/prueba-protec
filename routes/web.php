@@ -1,4 +1,7 @@
 <?php
+
+use App\Http\Controllers\AltaEntradaController;
+use App\Http\Controllers\ListaEntradasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +22,6 @@ use Illuminate\Support\Facades\Route;
 //Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/ver-entradas', [App\Http\Controllers\ListaEntradasController::class, 'index']);
-Route::get('/crear-entradas', [App\Http\Controllers\AltaEntradaController::class, 'index']);
+Route::get('/ver-entradas', [ListaEntradasController::class, 'index']);
+Route::get('/crear-entradas', [AltaEntradaController::class, 'index']);
+Route::post('/guarda-entrada', [AltaEntradaController::class, 'guardar']);
