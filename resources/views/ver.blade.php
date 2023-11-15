@@ -11,7 +11,11 @@
         {{ csrf_field() }}
         <input class="form-control me-2" name="buscar" id="buscar" type="search" placeholder="Buscar entrada" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Buscar</button>
+        <br>
     </form>
+    @error('buscar')
+        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+    @enderror
 
     <div class="row">
         @if ( session('resultado'))

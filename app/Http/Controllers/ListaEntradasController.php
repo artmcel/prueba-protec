@@ -18,6 +18,10 @@ class ListaEntradasController extends Controller
 
     public function buscar( Request $request ){
 
+        $validaBuscar = $request->validate([
+            'buscar' => 'required'
+        ]);
+
         $buscar = DB::table('entradas')
                 ->select('id', 'titulo', 'autor', 'contenido', 'fecha_publicacion')    
                 -> where('titulo' ,'like','%'.$request->input('buscar').'%', 'OR', 
