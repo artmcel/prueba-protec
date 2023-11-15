@@ -31,7 +31,16 @@ class ListaEntradasController extends Controller
 
         }
         return view('ver', ['entradas' => $buscar]);
+    }
 
+    public function buscarEntrada( $id ){
+
+        $buscarEntrada = DB::table('entradas')
+                        ->select('id', 'titulo', 'autor', 'contenido', 'fecha_publicacion')
+                        ->where('id', $id)
+                        ->get();    
+        
+        return view('entrada', ["resultadoEntrada" => $buscarEntrada]);
 
     }
 
