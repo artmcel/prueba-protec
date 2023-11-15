@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
+
 <div class="container">
     <h2>listado de entradas</h2>
 
@@ -26,3 +28,4 @@
         </table>
     </div>
 </div>
+@endsection
