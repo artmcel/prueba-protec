@@ -5,27 +5,22 @@
 <div class="container">
     <h2>listado de entradas</h2>
 
-    <div class="table-responsive">
-        <table class="table table-primary">
-            <thead>
-                <tr>
-                    <th scope="col">Titulo</th>
-                    <th scope="col">Autor</th>
-                    <th scope="col">Fecha de Publicación</th>
-                    <th scope="col">Contenido</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($entradas as $entrada)
-                <tr class="">
-                    <td scope="row">{{$entrada->titulo}}</td>
-                    <td>{{$entrada->autor}}</td>
-                    <td>{{$entrada->fecha_publicacion}}</td>
-                    <td>{{$entrada->contenido}}</td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+    <div class="row">
+        @foreach($entradas as $entrada)
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h4 class="card-title">{{$entrada->titulo}}</h4>
+                    <h6 class="card-subtitle text-muted">{{$entrada->autor}}</h6>
+                    <p class="card-text">{{$entrada->contenido}}</p>
+                    <a href="#" class="btn btn-primary">Ver mas...</a>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Fecha de Publicación: {{$entrada->fecha_publicacion}}</small>
+                </div>
+            </div>3
+        </div>
+        @endforeach
     </div>
 </div>
 @endsection
