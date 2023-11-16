@@ -24,7 +24,6 @@ de características propias de un Blog de Internet.
 ## Proceso de instalación
 - Descargar el repositorio en su entorno o servidor local.
 - Instalar composer, npm y wamp server. 
->Cabe señalar que esta descargando la rama de producción, por lo cual ya no sera necesario instalar los modulos de node.
 - Configurar la base de datos con los valores correspondientes a tu servidor (en este caso se utiliza mysql) **Revisar la configuracion de .env** necesarias.
 > Sobre la base de datos:
 >- Puede descargar la DB que se encuentra en el rar de este repositorio y hacer la importación en su servidor local.
@@ -42,10 +41,19 @@ de características propias de un Blog de Internet.
     DB_USERNAME=root
     DB_PASSWORD=
 
-**Solo si es necesario:**
+## Intalaciones
+
+Instalación de dependenciuas de composer
+
+    composer install
+
 Instalacion de paquetes de node 
 
     npm install
+
+Generar los assets con vite
+
+    npm run build
 
 También se recomienda limpiar la cache de la aplicación
     
