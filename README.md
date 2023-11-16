@@ -50,3 +50,7 @@ Instalacion de paquetes de node
 También se recomienda limpiar la cache de la aplicación
     
     php artisan cache:clear
+
+## Adicionales
+- El diagrama de flujo es el archivo `Diagrama-flujo-1.pdf`
+- Rar de la base de datos: `prueba_blog.rar`
